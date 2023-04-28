@@ -36,16 +36,20 @@ class _HomeScreenState extends State<HomeScreen> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        body: FractionallySizedBox(
-            widthFactor: 1,
-            heightFactor: 1,
-            child: Container(
-              color: Color.fromARGB(255, 237, 236, 236),
-              alignment: Alignment.center,
-              child: const Image(
-                image: AssetImage('images/logo.png'),
-                width: 100,
-              ),
-            )));
+        body: Container(
+      child: Row(
+        children: [
+          Column(
+            children: const [
+              Text(
+                'Glidee',
+                style: TextStyle(
+                    fontSize: 20, color: Color.fromARGB(255, 0, 0, 0)),
+              )
+            ],
+          )
+        ],
+      ),
+    ));
   }
 }
